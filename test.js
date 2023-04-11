@@ -11,5 +11,11 @@
 //   console.log("set timeout");
 // }, 3000);
 
-console.log(__dirname);
-console.log(__filename);
+const testing =(name)=>{
+    console.log("Hello " + name)
+}
+
+testing("Hammad")
+testing("Hammad")
+testing("Hammad")
+testing("Hammad")
