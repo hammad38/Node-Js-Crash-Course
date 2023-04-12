@@ -19,3 +19,5 @@ testing("Hammad")
 testing("Hammad")
 testing("Hammad")
 testing("Hammad")
+
+console.log(window)
