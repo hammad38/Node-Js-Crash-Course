@@ -11,13 +11,14 @@
 //   console.log("set timeout");
 // }, 3000);
 
-const testing =(name)=>{
-    console.log("Hello " + name)
-}
+// const testing =(name)=>{
+//     console.log("Hello " + name)
+// }
 
-testing("Hammad")
-testing("Hammad")
-testing("Hammad")
-testing("Hammad")
+// testing("Hammad")
+// testing("Hammad")
+// testing("Hammad")
+// testing("Hammad")
 
-console.log(window)
+// console.log(window)
+console.log(module)
