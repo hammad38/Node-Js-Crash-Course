@@ -21,4 +21,11 @@
 // testing("Hammad")
 
 // console.log(window)
-console.log(module)
+
+const array = [1, 2, 3, 3, 3, 4, 5, 6];
+
+const uniqueSet = new Set(array);
+
+const uniqueSetArray = [...uniqueSet];
+
+console.log(uniqueSetArray);
