@@ -1,0 +1,1 @@
+This is a txt file created with writeFileSync method with the method of append we can add more lines on the file
