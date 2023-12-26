@@ -1,23 +1,12 @@
-// const greet = (name) => {
-//   console.log(`Hello ${name}`);
-// };
+const { urlencoded } = require("body-parser");
+const express = require("express");
+const app = express();
 
-// greet("Hammad");
-// greet("Shoaib");
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// console.log(global)
+app.use("/api/users", require("./routes/api/users"));
 
-// setTimeout(() => {
-//   console.log("set timeout");
-// }, 3000);
-
-const testing =(name)=>{
-    console.log("Hello " + name)
-}
-
-testing("Hammad")
-testing("Hammad")
-testing("Hammad")
-testing("Hammad")
-
-console.log(window)
+app.listen("3000", () => {
+  console.log("Server is started on port 3000");
+});
