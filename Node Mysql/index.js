@@ -54,6 +54,41 @@ app.get("/employee1", (req, res) => {
   });
 });
 
+//select employee
+app.get("/employee", (req, res) => {
+  let sql = "SELECT * FROM employee";
+  db.query(sql, (err, results) => {
+    if (err) {
+      throw err;
+    }
+    console.log(results);
+    res.send("Employee data fetched");
+  });
+});
+
+// update employee
+app.get("/updateemployee/:id", (req, res) => {
+  let newName = "Hammad";
+  let sql = "UPDATE employee SET name = ? WHERE id = ?";
+  db.query(sql, [newName, req.params.id], (err) => {
+    if (err) {
+      throw err;
+    }
+    res.send("Employee Updated");
+  });
+});
+
+//delete employee
+app.get("/deleteemployee/:id", (req, res) => {
+  let sql = `DELETE FROM employee WHERE id = ${req.params.id}`;
+  db.query(sql, (err) => {
+    if (err) {
+      throw err;
+    }
+    res.send("Employee Deleted");
+  });
+});
+
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
 });
